@@ -1,0 +1,227 @@
+
+@font-face{
+font-family:'BYekan';
+src:url('../fonts/BYekan.eot?#') format('eot'),
+url('../fonts/BYekan.woff?#') format('woff'),
+url('../fonts/BYekan.ttf?#') format('truetype');
+
+}
+body{
+	direction: rtl;
+	font-family:'BYekan';
+	overflow-x: hidden;
+}
+
+p{
+	font-family:'BYekan';
+}
+h1,h2,h3,h4,h5{
+	font-family:'BYekan';
+}
+li{
+	list-style: none;
+}
+th{
+	text-align: center;
+}
+
+td{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.navbar-default{
+
+	background-color: #007ee5;
+	border-color:#007ee5;
+	height: 55px;
+	border-right:1px solid #1372bf;   
+}
+
+.dropdown-toggle .icon-user{
+	width: 43px;
+	height: 44px;
+	border-radius: 100%;
+	float: left;
+	color: #fff;
+background-color: #a5a5a5;
+margin-top: 3px;
+text-align: center;
+padding-top: 8px;
+font-size: 26px;
+}
+
+.en-icon i{
+ color: #fff;
+ margin-top: 15px;
+position: absolute;
+font-size: 21px;
+}
+.top-right{
+
+float: right;
+margin-top: 5px;
+}
+
+.top-right i{
+	color: #fff;
+	font-size: 42px;
+	float: right;
+}
+.danger-envelope{
+
+		width: 24px;
+background-color: #f2484d;
+border-radius: 100%;
+color: #fff;
+position: absolute;
+height: 24px;
+margin-left: 22%;
+margin-top: 4px;
+border: 1px solid #e53238;
+text-align: center;
+right: -28%;
+}
+
+footer{
+	width: 100%;
+	background-color: #000;
+	height: 55px;
+	position: absolute;
+	
+
+}
+
+.content{
+	border: 2px solid #eee;
+	height: 174px;
+	background-color: #0866c6;s
+}
+
+.content i{
+	color: #fff;
+	text-align: left;
+	margin-top: 12%;
+	font-size: 50px;
+position: absolute;
+right: 72%;
+}
+
+.content p{
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 2px 2px 2px rgb(142,144,146);
+	margin-top: 15%;
+	text-align: center;
+}
+
+.content span{
+	text-align: center;
+color: #fff;
+font-size: 16px;
+line-height: 40px;
+position: absolute;
+right: 4%;
+width: 92%;
+bottom: 0;
+}
+
+
+aside{
+	background-color: #16202f;
+	display: none;
+	height: 620px;
+	position: absolute;
+	right: 0;
+	top: 55px;
+	width: 254px;
+	z-index: 9999999;
+overflow: hidden;
+}
+aside ul li{
+	color: #fff;
+	line-height: 70px;
+
+}
+
+aside ul li i{
+	    margin-left: 16px;
+
+}
+#toggleDemo{
+
+	background-color: rgb(27,38,54) ;
+	right: 0;
+	width: 98%;
+	position: relative;
+	margin-top: -22px;
+	transition: all 200ms linear;
+	text-align: center;
+
+}
+#toggleDemo1{
+
+	background-color: rgb(27,38,54) ;
+	right: 0;
+	width: 98%;
+	position: relative;
+	margin-top: -22px;
+	transition: all 200ms linear;
+	text-align: center;
+
+}
+#toggleDemo2{
+
+	background-color: rgb(27,38,54) ;
+	right: 0;
+	width: 98%;
+	position: relative;
+	margin-top: -22px;
+	transition: all 200ms linear;
+	text-align: center;
+
+}
+#toggleDemo3{
+
+	background-color: rgb(27,38,54) ;
+	right: 0;
+	width: 98%;
+	position: relative;
+	margin-top: -22px;
+	transition: all 200ms linear;
+	text-align: center;
+
+}
+#toggleDemo4{
+
+	background-color: rgb(27,38,54) ;
+	right: 0;
+	width: 98%;
+	position: relative;
+	margin-top: -22px;
+	transition: all 200ms linear;
+	text-align: center;
+
+}
+
+a:hover{
+text-decoration: none;
+	color: #fff;	
+}
+
+.tree li a {
+	color: #000;
+}
+
+
+
+.nav-tabs li a{
+	color: #000;
+	
+}
+.nav-tabs li {
+	
+	float: right;
+}

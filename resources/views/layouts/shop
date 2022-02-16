@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.css">
+           
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/css/app.css">
+   
+ <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+        <title>فروشگاه کالا</title>
+
+
+
+          <style>
+       
+    </style>
+
+    </head>
+    <body>
+
+
+    <div class="top-bar" rel="navigation" >
+
+    <div class="container-large " >
+        
+
+        <ul class="top-bar_right">
+            <li></li>
+            <li>
+                    <a href="#" id="register">
+
+
+                        <svg width="24" height="24" id="login" xmlns="http://www.w3.org/2000/svg">
+
+                         <g>
+                          <svg viewBox="0 0 24 24" id="login" width="100%" height="100%">
+                                <circle fill="#ffffff" cx="9" cy="8" r="4"></circle>
+                                <path fill="#ffffff" d="M9 14c-6.1 0-8 4-8 4v2h16v-2s-1.9-4-8-4z"></path>
+                            </svg>
+                         </g>
+                        </svg>
+
+                        
+                        <span style="display: inline-block;" data-toggle="modal" 
+                        data-target="#signup" data-popup="register-login" data-type="">ثبت نام / ورود</span>
+                    </a>
+
+
+            </li>
+
+         
+           @include('shoping')
+
+
+           
+    
+            
+        </ul>
+
+        <ul class="top-bar_left">
+            
+            <li>
+                
+                <a href="#">مجله اینترنتی دیجی استایل</a>
+
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+
+
+
+
+ <div class="container-large ">
+
+        <ul class="logo" style="margin-right:37%;">
+             <li>
+                
+                    <a href="/" style="border:none !important; ">
+                                
+                        <img src="/img/logo.png">       
+
+
+                    </a>
+
+            </li>
+            </ul>
+          </div>
+
+
+
+        @yield('content')
+  @include('signup')
+</div>
+                  <footer>
+            
+                <div class="container-large">
+                    
+                    <div class="footer-content first">
+                        
+                        <span class="footer-title">خدمات مشتریان</span>
+                         <a href="#">
+پاسخ به پرسش های متداول</a>
+                         <a href="#">رویه های بازگرداندن کالا</a>
+                         <a href="#">شرایط استفاده</a>
+                         <a href="#">حریم خصوصی</a>
+
+
+                    </div>
+                    <div class="footer-content second">
+                        
+
+                        <span class="footer-title">ثبت نام در خبرنامه دیجی استایل</span>
+                         <a href="#">با ثبت نام در خبرنامه دیجی استایل، اولین نفری باشید که از جدیدترین محصولات، جشنواره ها و فروش‌های ویژه ما مطلع می شوید.</a>
+
+
+                         <input type="text" name="" >
+                         <button >ثبت ایمیل</button>
+
+                    </div>
+                    <div class="footer-content third">
+                        
+
+
+                         <span class="footer-title">
+                             
+
+اطلاعات دیجی استایل
+                             <span>پشتیبانی: ۹۵۱۱۹۹۰۰ (۰۲۱)</span>
+                         </span>
+                         <a href="#">تماس با ما</a>
+                         <a href="#">دربراره ما</a>
+
+
+                         <div class="social">
+                             
+                            <a href="#">
+                                    
+                                <i class="icon1 icon-instagram1"></i>
+                            </a>
+                             <a href="#">
+                                    
+                                <i class="icon1 icon-telgram1"></i>
+                            </a>
+                             <a href="#">
+                                    
+                                <i class="icon1 icon-facebook1"></i>
+                            </a>
+                             <a href="#">
+                                    
+                                <i class="icon1 icon-twitter1"></i>
+                            </a>
+                             <a href="#">
+                                    
+                                <i class="icon1 icon-aparat"></i>
+                            </a>
+
+
+                            <a href="#">
+                                    
+                                <i class="icon1 icon-plus1"></i>
+                            </a>
+                             <a href="#">
+                                    
+                                <i class="icon1 icon-pinterest1"></i>
+                            </a>
+
+                         </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="copy">
+                    <p>
+                        کليه حقوق اين سايت متعلق به شرکت آوازه نو پوشان پارسی (فروشگاه اینترنتی دیجی استایل) می‌باشد.
+                        <span> digistyle.com - 2018 © Copyright</span>
+                    </p>
+
+                </div>
+
+        </footer>
+        
+
+
+
+<script type="text/javascript" src="/js/app.js"></script>
+
+<script type="text/javascript">
+  
+
+
+  $("#shoping").css('display','none');
+
+
+$(".cart-button").mouseenter(function () {
+        $("#shoping").fadeIn();
+    });
+ $("#shoping").mouseleave(function(){
+       $("#shoping").fadeOut();
+});
+
+deletecart=function(id){
+
+
+
+$.ajaxSetup({
+
+      headers:{
+
+        'x-CSRF-Token':$('meta[name=_token]').attr('content')
+
+      }
+
+
+    });
+
+    $.ajax({
+
+      url:'/deletecart',
+      type:'post',
+      data:'product_id='+id,
+   
+      success:function(data){
+        $("#shoping").html(data);
+
+      },
+      error:function(){
+
+        alert('no');
+      }
+
+    });
+
+
+}
+
+addcart=function(id){
+
+$.ajaxSetup({
+
+      headers:{
+
+        'x-CSRF-Token':$('meta[name=_token]').attr('content')
+
+      }
+
+
+    });
+
+    $.ajax({
+
+      url:'/addcart',
+      type:'post',
+      data:'product_id='+id,
+   
+      success:function(data){
+        $("#shoping").html(data);
+
+      },
+      error:function(){
+
+        alert('no');
+      }
+
+    });
+         
+
+}
+
+
+
+  
+</script>
+
+
+
+
+    </body>
+    </html>
